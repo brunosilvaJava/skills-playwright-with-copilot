@@ -1,0 +1,23 @@
+{
+  "name": "Playwright + Copilot - Treinamento de Testes E2E",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ms-playwright.playwright",
+        "biomejs.biome"
+      ],
+      "settings": {
+        "chat.agent.enabled": true,
+        "github.copilot.chat.codeGeneration.useInstructionFiles": true
+      }
+    }
+  },
+  "forwardPorts": [5173, 4173],
+  "postCreateCommand": "corepack enable && pnpm install && pnpm exec playwright install --with-deps chromium && echo 'Ambiente pronto. Abra o README.md e siga o Passo 0.'"
+}

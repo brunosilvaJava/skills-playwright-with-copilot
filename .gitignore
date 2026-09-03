@@ -1,0 +1,16 @@
+# Dependências
+node_modules/
+
+# Build da aplicação
+dist/
+
+# Artefatos do Playwright
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Logs e temporários
+*.log
+.DS_Store
+.env
