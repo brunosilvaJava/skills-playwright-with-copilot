@@ -28,11 +28,11 @@ export default function App() {
 
       <Board cards={game.cards} stateOf={game.stateOf} onFlip={game.flip} />
 
-      {/*
-        Passo 3 (TDD): a mensagem de vitória ainda NÃO é exibida.
-        Você vai escrever um teste E2E que falha e, então, implementar aqui
-        a renderização usando `game.won` para o teste passar.
-      */}
+      {game.won ? (
+        <p className="win" data-testid="win-message" role="status">
+          Você venceu! Você fez {game.moves} movimentos.
+        </p>
+      ) : null}
     </main>
   );
 }
