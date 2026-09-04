@@ -44,7 +44,7 @@ jobs:
         run: pnpm test:e2e
 
       - name: Publicar relatório HTML
-        if: ${{ !cancelled() }}
+        if: ${{!cancelled()}}
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
