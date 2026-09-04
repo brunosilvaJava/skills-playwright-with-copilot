@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures.js';
 
 test('loads the memory game board', async ({ page }) => {
   await page.goto('/?seed=42');

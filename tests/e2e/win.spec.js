@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './fixtures.js';
 
 test('completes the game and shows the win message', async ({ page }) => {
   await page.goto('/?seed=42');
