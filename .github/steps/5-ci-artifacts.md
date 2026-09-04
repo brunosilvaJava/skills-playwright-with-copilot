@@ -44,7 +44,11 @@ jobs:
         run: pnpm test:e2e
 
       - name: Publicar relatório HTML
+<<<<<<< HEAD
         if: "!cancelled()"
+=======
+        if: {% raw %}${{ !cancelled() }}{% endraw %}
+>>>>>>> e249135 (fix: escape workflow expression in step content)
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
